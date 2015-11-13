@@ -46,7 +46,6 @@ class CinemaMaster extends Migration
         Schema::create('sala', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre',55);
-            $table->integer('')->unsigned();
             $table->integer('ciudad_id')->unsigned();
             $table->foreign('ciudad_id')->references('id')->on('ciudad');
             $table->timestamps();
